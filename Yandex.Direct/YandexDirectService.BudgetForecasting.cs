@@ -7,12 +7,12 @@ namespace Yandex.Direct
 {
     partial class YandexDirectService
     {
-        public int CreateNewForecast(string[] phrases, int[] geoIds = null, int[] categoryIds = null)
+        public int CreateNewForecast(string[] phrases, int[] geoIds = null, int[] categoryIds = null,string currency="RUB",string auctionBids= "Yes")
         {
             if (phrases == null || phrases.Length == 0)
                 throw new ArgumentNullException("phrases");
 
-            var request = new { Categories = categoryIds, GeoID = geoIds, Phrases = phrases };
+            var request = new { Categories = categoryIds, GeoID = geoIds, Phrases = phrases, Currency = currency, AuctionBids = auctionBids};
 
             return YandexApiClient.Invoke<int>(ApiMethod.CreateNewForecast, request);
         }

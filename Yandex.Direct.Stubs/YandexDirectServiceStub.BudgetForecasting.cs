@@ -7,7 +7,7 @@ namespace Yandex.Direct
 {
     partial class YandexDirectServiceStub
     {
-        public int CreateNewForecast(string[] phrases, int[] geoIds = null, int[] categoryIds = null)
+        public int CreateNewForecast(string[] phrases, int[] geoIds = null, int[] categoryIds = null, string currency="",string auctionBids="Yes")
         {
             if (phrases == null || phrases.Length == 0)
                 throw new ArgumentNullException("phrases");

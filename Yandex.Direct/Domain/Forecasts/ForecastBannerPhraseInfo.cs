@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Yandex.Direct.Domain.Forecasts;
 using Yandex.Direct.Serialization;
 
 namespace Yandex.Direct
@@ -62,6 +63,11 @@ namespace Yandex.Direct
         [JsonProperty("PremiumCTR")]
         public decimal PremiumCtr { get; set; }
 
+        [JsonProperty("CTR")]
+        public decimal Ctr { get; set; }
+
+        public string Currency { get; set; }
+        public PhraseAuctionBids [] AuctionBids { get; set; }
         // TODO Create CoverageInfo class
         //public CoverageInfo[] Coverage { get; set; }
         //public CoverageInfo[] ContextCoverage { get; set; }

@@ -26,7 +26,7 @@ namespace Yandex.Direct
 
         // Budget forecasting
 
-        int CreateNewForecast(string[] phrases, int[] geoIds = null, int[] categoryIds = null);
+        int CreateNewForecast(string[] phrases, int[] geoIds = null, int[] categoryIds = null, string Currency = "", string AuctionBids = "Yes");
         
         ForecastInfo GetForecast(int forecastId);
         
